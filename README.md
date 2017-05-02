@@ -10,7 +10,7 @@ Python client library for Ratemarkt API
 
 >>> c = RatemarktClient('RATEMARKT_API_URL', 'YOU_API_KEY')
 >>> c.check_hotels('928b37', None, date(2017, 06, 22), date(2017, 06, 25), [(2,)],
-               'USD', 'US')
+                   'USD', 'US')
 
 {u'debugData': None,
  u'hotels': [{u'countryCode': u'us',
