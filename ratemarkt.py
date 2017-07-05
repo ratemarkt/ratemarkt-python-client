@@ -124,10 +124,10 @@ class RatemarktClient:
         query = {
             'bookingRef': booking_ref,
         }
-        self._request('checkbooking', query)
+        return self._request('checkbooking', query)
 
     def cancel_booking(self, booking_ref):
         query = {
             'bookingRef': booking_ref,
         }
-        self._request('cancelbooking', query)
+        return self._request('cancelbooking', query)
