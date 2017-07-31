@@ -108,16 +108,17 @@ class RatemarktClient:
                 'phone': phone
             },
             'occupancy': self.populate_occupancy(occupancy_list),
-            'creditCard': {
+            'specialRequest': special_request
+        }
+        if cc_num:
+            query.update('creditCard', {
                 'number': cc_num,
                 'cvv': cc_cvv,
                 'year': cc_year,
                 'month': cc_month,
                 'firstName': cc_firstname,
                 'lastName': cc_lastname
-            },
-            'specialRequest': special_request
-        }
+            })
         return self._request('bookrate', query)
 
     def check_booking(self, booking_ref):
